@@ -4,7 +4,7 @@ var readSync = require('./read_sync');
 var readAsync = require('./read_async');
 var file = 'node.exe';
 var stream = fs.createWriteStream(file);
-var download = 'http://nodejs.org/dist/latest/node.exe'
+var download = 'http://nodejs.org/dist/latest/node.exe';
 
 
 http.get(download, function(response){
