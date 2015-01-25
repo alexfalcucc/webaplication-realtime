@@ -1,2 +1,2 @@
 # webaplication-realtime
-Exercises and build project from ebook Aplicações Web em Tempo Real.
+Exercises and build project from ebook Aplicações Web in Real Time.
