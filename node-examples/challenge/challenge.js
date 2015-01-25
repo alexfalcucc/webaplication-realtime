@@ -18,13 +18,13 @@ var router = function(pathname){
 }
 
 var server = http.createServer(function(request, response){
-   var pathname = url.parse(request.url, true).pathname;
-   var page = router(pathname);
-   
-   fs.readFile(page, function(error, html){
-     response.writeHeader(200, {'Content-Type': 'text/html'});
-     response.end(html);
-   }); 
+ var pathname = url.parse(request.url, true).pathname;
+ var page = router(pathname);
+
+ fs.readFile(page, function(error, html){
+   response.writeHeader(200, {'Content-Type': 'text/html'});
+   response.end(html);
+ });
 });
 
 server.listen(3000, function(){
