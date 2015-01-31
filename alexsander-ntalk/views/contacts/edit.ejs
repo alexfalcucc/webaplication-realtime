@@ -1,0 +1,14 @@
+<% include ../head %>
+<header>
+    <h2>N-talk - Edit contact</h2>
+</header><!-- /header -->
+<section>
+    <form action="/acontact/<% - id %>?_method=put" method="POST" accept-charset="utf-8">
+    <label for="">Name: </label>
+    <input type="text" name="contact[name]" value="<%- contact.name %>" placeholder="">
+    <label>E-mail:</label>
+    <input type="email" name="contact[email]" value="<%- contact.email %>" placeholder="">
+    </form>
+</section>
+<% include ../exit %>
+<% include ../footer %>
