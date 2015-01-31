@@ -1,0 +1,15 @@
+<% include ../head %>
+<header>
+<section>
+<form action="/contact/<%- id %>??_method=delete" method="POST" accept-charset="utf-8">
+<p><label>Name: </label><%- contact.name %></p>
+<p><label>E-mail:</label><%- contact.email %></p>
+<p>
+<button type="submit">Delete</button>
+<a href="/contact/<%- id %>/editar" title="">Edit</a>
+</p>
+</form>
+</section>
+</header><!-- /header -->
+<% include ../exit %>
+<% include ../footer %>
