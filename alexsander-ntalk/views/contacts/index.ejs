@@ -4,32 +4,32 @@
     <h4>Your contact list.</h4>
 </header><!-- /header -->
 <section>
-<form action="/contact" method="post" accept-charset="utf-8">
-    <input type="text" name="contact[name]" value="" placeholder="Name">
-    <input type="text" name="contact[email]" value="" placeholder="E-mail">
-    <button type="submit">Save</button>
-</form>
-<table>
-    <caption>table title and/or explanatory text</caption>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>E-mail</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-    <% contacts.forEach(function(contact, index){ %>
-        <tr>
-            <td><%- contact.name %></td>
-            <td><%- contact.email %></td>
-            <td>
-                <a href="/contact/<%- index %>" title="">Detail</a>
-            </td>
-        </tr>
-    <% }) %>
-    </tbody>
-</table>
+    <form action="/contact" method="post" accept-charset="utf-8">
+        <input type="text" name="contact[name]" value="" placeholder="Name">
+        <input type="text" name="contact[email]" value="" placeholder="E-mail">
+        <button type="submit">Save</button>
+    </form>
+    <table>
+        <caption>table title and/or explanatory text</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contacts.forEach(function(contact, index){ %>
+            <tr>
+                <td><%- contact.name %></td>
+                <td><%- contact.email %></td>
+                <td>
+                    <a href="/contact/<%- index %>" title="">Detail</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
 </section>
 <% include ../exit %>
 <% include ../footer %>

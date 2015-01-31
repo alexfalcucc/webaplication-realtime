@@ -5,17 +5,16 @@ module.exports = function(app) {
 		},
 		login: function(request, response) {
 			console.log(request.body);
-			var email = request.body.user.email
-			  , name = request.body.user.name
-			;
-		  if (email && name) {
-		  	var user = request.body.user;
-		  	user['contacts'] = [];
-		  	request.session.user = user;
-		  	response.redirect('/contacts');
-		  } else {
-		  	response.redirect('/')
-		  }
+			var email = request.body.user.email,
+				name = request.body.user.name;
+			if (email && name) {
+				var user = request.body.user;
+				user['contacts'] = [];
+				request.session.user = user;
+				response.redirect('/contacts');
+			} else {
+				response.redirect('/')
+			}
 		},
 		logout: function(request, response) {
 			request.session.destroy();
